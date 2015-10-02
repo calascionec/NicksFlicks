@@ -20,7 +20,8 @@ movies.config(function($stateProvider, $urlRouterProvider) {
                 templateUrl: "partials/header.html"
             },
             "body": {
-                templateUrl: "partials/movies-list.html"
+                templateUrl: "partials/movies-list.html",
+                controller: "ReviewCtrl"
             }
         }
     });
