@@ -21,8 +21,14 @@ movies.config(function($stateProvider, $urlRouterProvider) {
             },
             "body": {
                 templateUrl: "partials/movies-list.html",
-                controller: "ReviewCtrl"
+                controller: "MoviesCtrl"
             }
         }
     });
+
+    $stateProvider.state("movies-list.review", {
+        url: "/:reviewId",
+        templateUrl: "partials/movies-list.review.html",
+        controller: "ReviewCtrl"
+    })
 });
