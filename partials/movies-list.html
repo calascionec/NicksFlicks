@@ -2,24 +2,29 @@
     <div class="col-md-4">
         <ul class="list-unstyled">
             <li ng-repeat="item in reviews">
-                <a ui-sref="movies-list.detail({id: item.id})">{{item.title}}</a></li>
+                <a ui-sref="movies-list.review({reviewId: item.id})">{{item.title}}</a></li>
         </ul>
     </div>
 
-    <div class="col-md-8 detail" ui-veiw>
-
-
+    <div class="col-md-8">
         <div class="row">
-            <h2>Create New Movie Review</h2>
-            <form ng-submit="ReviewFactory.addReveiw()" role="form">
-                <div class="form-group">
-                    <input type="text" ng-model="ReviewFactory.reviewTitle" class="form-control" placeholder="Enter the title for the review here">
-                </div>
-                <div class="form-group">
-                    <textarea ng-model="ReviewFactory.reviewBody" class="form-control" rows="8" cols="40" placeholder="Enter your review here!"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit Review!</button>
-            </form>
+            <div class="col-md-12" ui-view>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Create New Movie Review</h2>
+                <form ng-submit="ReviewFactory.addReveiw()" role="form">
+                    <div class="form-group">
+                        <input type="text" ng-model="ReviewFactory.reviewTitle" class="form-control" placeholder="Enter the title for the review here">
+                    </div>
+                    <div class="form-group">
+                        <textarea ng-model="ReviewFactory.reviewBody" class="form-control" rows="8" cols="40" placeholder="Enter your review here!"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit Review!</button>
+                </form>
+            </div>
         </div>
     </div>
 </div>
