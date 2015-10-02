@@ -1,8 +1,8 @@
 movies.directive("nightMode", function() {
-    var html = angular.element("#test");
+    var body = angular.element("#body");
     return function(scope, element) {
         element.bind("click", function() {
-            html.addClass("invert");
+            body.toggleClass("invert");
         })
     }
 });

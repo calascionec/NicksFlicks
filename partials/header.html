@@ -1,8 +1,9 @@
-<div class="row">
+<div class="row" ng-init="day = true">
     <div class="col-md-12">
         <h1>Nick's flicks</h1>
         <h4>Let's talk about movies!</h4>
-        <button class="btn btn-sm btn-primary" night-mode>Night Mode</button>
+        <button ng-show="day" ng-click="day= !day" class="btn btn-sm btn-primary" night-mode>Night Mode</button>
+        <button ng-show="!day" ng-click= "day = !day" class="btn btn-sm btn-primary" night-mode>Day Mode</button>
         <hr>
     </div>
 </div>
