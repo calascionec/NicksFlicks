@@ -1,9 +1,12 @@
 .invert {
-  -webkit-filter: invert(1) hue-rotate(180deg);
-  filter: invert(1) hue-rotate(180deg);
+  -webkit-filter: invert(75%) hue-rotate(180deg);
+  filter: invert(75%) hue-rotate(180deg);
   background-color: #333333;
 }
 
+h5 {
+    display: inline;
+}
 
 h4, hr {
     color: lightgrey;

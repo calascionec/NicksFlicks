@@ -1,8 +1,16 @@
 <div class="row">
     <div class="col-md-4">
+        <h5>Order By:</h5>
+        <button class="btn btn-success btn-sm" ng-click="order = 'movie_title'">Movie Title</button>
+        <button class="btn btn-success btn-sm" ng-click="order = 'release_year'">Release Year</button>
+
         <ul class="list-unstyled">
-            <li ng-repeat="item in reviews">
-                <a ui-sref="movies-list.review({reviewId: item.id})">{{item.title}}</a></li>
+            <li ng-repeat="item in reviews | orderBy: order ">
+                <a ui-sref="movies-list.review({reviewId: item.id})">{{item.title}}</a>
+                <ul class="list-unstyled list-inline">
+                    <li class="movie-info">{{item.movie_title}} - {{item.release_year}}</li>
+                </ul>
+            </li>
         </ul>
     </div>
 
