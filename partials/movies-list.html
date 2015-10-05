@@ -6,9 +6,9 @@
 
         <ul class="list-unstyled">
             <li ng-repeat="item in reviews | orderBy: order ">
-                <a ui-sref="movies-list.review({reviewId: item.id})">{{item.title}}</a>
-                <ul class="list-unstyled list-inline">
-                    <li class="movie-info">{{item.movie_title}} - {{item.release_year}}</li>
+                <h5>{{item.movie_title}} - {{item.release_year}}</h5>
+                <ul>
+                    <li class="movie-info"><a ui-sref="movies-list.review({reviewId: item.id})">{{item.title}}</a></li>
                 </ul>
             </li>
         </ul>
