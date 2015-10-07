@@ -8,7 +8,9 @@
             <li ng-repeat="item in reviews | orderBy: order ">
                 <h5>{{item.movie_title}} - {{item.release_year}}</h5>
                 <ul>
-                    <li class="movie-info"><a ui-sref="movies-list.review({reviewId: item.id})">{{item.title}}</a></li>
+                    <li class="movie-info">
+                      <a ui-sref="movies-list.review({reviewId: item.id})">{{item.title}}</a>
+                    </li>
                 </ul>
             </li>
         </ul>
@@ -23,7 +25,7 @@
         <div class="row">
             <div class="col-md-12">
                 <h2>Create New Movie Review</h2>
-                <form ng-submit="ReviewFactory.addReveiw()" role="form">
+                <form ng-submit="ReviewFactory.addReview()" role="form">
                     <div class="form-group">
                         <input type="text" ng-model="ReviewFactory.reviewTitle" class="form-control" placeholder="Enter the title for the review here">
                     </div>
