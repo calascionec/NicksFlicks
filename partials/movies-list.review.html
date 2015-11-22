@@ -1,4 +1,7 @@
-<h1>{{review.title}}</h1>
-<p>
-    {{review.body}}
-</p>
+<div class="review-info" ng-show="{{review.id}}">
+    <h1>{{review.movie_title}} - {{review.release_year}}</h1>
+    <h2>{{review.title}}</h2>
+    <p>
+        {{review.body}}
+    </p>
+</div>

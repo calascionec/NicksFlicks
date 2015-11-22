@@ -15,9 +15,11 @@ movies.factory("ReviewFactory", function ReviewFactory() {
     ];
 
     factory.addReview = function() {
-        factory.reviews.push({id: factory.reviews.length + 1, title: factory.reviewTitle, body: factory.reviewBody})
+        factory.reviews.push({id: factory.reviews.length + 1, movie_title: factory.movieTitle, release_year: factory.releaseYear, title: factory.reviewTitle, body: factory.reviewBody})
         factory.reviewTitle = null;
         factory.reviewBody = null;
+        factory.movieTitle = null;
+        factory.releaseYear = null;
     };
 
 
